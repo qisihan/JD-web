@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#box{width: 100px;height: 100px;background: #666;}
+		.group{width: 120px;height: 120px;position: relative;background-color: #ccc;overflow: hidden;}
+		.group_bg{width: 0px;height: 0px;position: absolute;left: 0;right: 0;background-color: #007AFF;opacity: .5;border-radius: 120px;z-index: 2;}
+		.group_txt{width: 120px;height: 120px;position: absolute;left: 0;top: 0;z-index: 3;}
+	</style>
+	<body>
+		<div id="box" class="box"></div>
+		<h3>　</h3>
+		<div class="group">
+			<div class="group_txt">
+				<a href="">sin</a>
+			</div>
+			<div class="group_bg"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.box').on('mousedown',function(ev){
+				var w=$(this).innerWidth();
+				var h=$(this).innerHeight();
+				var t=$(this).offset().top;
+				var l=$(this).offset().left;
+				var x=ev.clientX,y=ev.clientY;
+				var timer=null, _this=this;
+				console.log(w,h,t,l,x,y,(x-l),(y-t),((x-l)/w*100),((y-t)/h*100));
+				var cx=(x-l)/w*100,cy=(y-t)/h*100;
+				var ks=10;
+				timer = setInterval(function(){
+					if(ks>=100){
+						clearInterval(timer);
+					}else{
+						ks++;
+					}
+					$(_this).css("background","-webkit-radial-gradient("+cx+"% "+cy+"%, #fff "+ks+"%,#666)");
+				},4)
+				//$(this).css("background","-webkit-radial-gradient("+cx+"% "+cy+"%, #fff 10%,#666)")
+				
+			})
+			$('.group').on('mousedown',function(ev){
+				var w=$(this).innerWidth();
+				var h=$(this).innerHeight();
+				var t=$(this).offset().top;
+				var l=$(this).offset().left;
+				var x=ev.pageX,y=ev.pageY;
+				var timer=null, _this=this;
+				console.log(w,h,t,l,x,y,(x-l),(y-t),((x-l)/w*100),((y-t)/h*100));
+				var cx=(x-l)/w*100,cy=(y-t)/h*100;
+				var ks=1,speed=1,ratio=38;
+				$(this).on('mouseup',function(){
+					clearInterval(timer);
+					timer = setInterval(function(){
+						speed=ks/500*ratio;
+						if(ks>=480){
+							clearInterval(timer);
+						}else{
+							ks+=speed;
+						}
+						$(_this).find('.group_bg').css({"left":(x-l-(ks/2))+"px","top":(y-t-(ks/2))+"px","width":ks+"px","height":ks+"px"});
+					},4)
+				})
+				//$(this).find('.group_bg').css({"left":(x-l)+"px","top":(y-t)+"px"}).animate({"width":"240px","height":"240px"},600);
+				//console.log($(this).find('.group_bg').innerWidth());
+			})
+		})
+	</script>
+</html>

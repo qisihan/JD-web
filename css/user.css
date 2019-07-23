@@ -1,0 +1,59 @@
+@charset "utf-8";
+/**/
+.header{background-color: rgba(227,48,33,1);}
+.userinfo{background-color: #e33021;}
+.head_face,.head_title,.head_tool{display: inline-block;}
+.head_face,.head_title{opacity: 0;}
+.head_face{padding-top: .4375rem;}
+.head_title{line-height:3rem;text-align: center;color: #fff;}
+.head_tool{padding: .875rem 0 0;}
+.head_tool li{width: 1.2875rem;height: 1.25rem;float: right;margin-left: 1rem;}
+
+.user_head img,.user_lv img,.user_plus img,.head_tool img{width: 100%;display: block;}
+.user_head{width: 4.375rem;border-radius: 2.1875rem;overflow: hidden;text-align: center;}
+.user_face{padding-bottom: 2rem;}
+.user_name{padding-left: 0.5rem;}
+.user_lv,.user_plus{display: inline-block;border-radius: 2.5rem;overflow: hidden;margin-right: 0.25rem;}
+.user_lv{width: 4.97875rem;}
+.user_plus{width: 5.270625rem;}
+.user_name p{color: #fff;margin: 0.625rem 0;}
+.manage{color: #fff;font-size: 0.75rem;margin: 1.5rem 0 0 0;}
+.go{display: inline-block;float: right;width: .3125rem;height: .5625rem;background: url(../img/jd/product-detail-sprites-5.1.png) no-repeat 0 -1.25rem;background-size: 6.25rem 6.25rem;margin: 0.25rem 0.25rem 0 0.5rem;}
+/**/
+.pay_status,.assets,.follow,.recommend{background-color: #fff;margin-bottom: 0.5rem;font-size: 0.725rem;text-align: center;}
+.pay_status li,.assets li,.follow li,.recommend li{display: block;width: 20%;float: left;padding: 0.5rem 0 0.725rem;}
+.pay_status i,.assets i,.follow i,.recommend i{display: block;width: 1.333125rem;height: 1.29125rem;margin: 0.5rem auto;}
+.pay_status i{background-image: url(../img/jd/icon5_15.jpg) ;background-size: 19.1875rem 1.29125rem;background-repeat: no-repeat;}
+.pay_status :nth-child(2) i{background-position: -4.5rem 0;}
+.pay_status :nth-child(3) i{background-position: -9rem 0;}
+.pay_status :nth-child(4) i{background-position: -13.5625rem 0;}
+.pay_status :nth-child(5) i{background-position: -18.125rem 0;}
+.bor{position: relative;border: none;background: url(../img/jd/angle_15.jpg) repeat-y left center;background-size: .3125rem 5.145625rem;}
+/*.bor:after{content: ''; position: absolute;top: 0;left: 0;border-left: 1px solid #e2e2e2;-webkit-box-sizing: border-box;box-sizing: border-box;width: 200%;height: 200%;-webkit-transform: scale(0.5);transform: scale(0.5);-webkit-transform-origin: left top;transform-origin: left top;}*/
+/**/
+.assets i,.follow i{font-size: 0.875rem;font-weight: 600;color: #777;}
+.assets_icon{background: url(../img/jd/icon7_19.jpg) no-repeat 0 0;background-size: 1.333125rem 1.29125rem;}
+/**/
+.follow li,.recommend li{width: 25% !important;}
+.follow i{color: #fe6f6d;height: 1.3125rem;}
+.follow_icon{background: url(../img/jd/follow_icon_31.jpg) no-repeat 0 0;background-size: 1.35375rem 1.29125rem;}
+/**/
+.recommend i{background-image: url(../img/jd/recommend_icon_35.jpg);background-repeat: no-repeat;background-size: 15.4375rem 1.29125rem;height: 1.3125rem;}
+.recommend :nth-child(2) i{background-position: -4.6875rem 0;}
+.recommend :nth-child(3) i{background-position: -9.375rem 0;}
+.recommend :nth-child(4) i{background-position: -14.125rem 0;}
+/**/
+.like{font-size: 0.725rem;color: #777;line-height: 1.25rem;height: 1.25rem;text-align: center;margin-bottom: 0.5rem;}
+.like .line{width: 38%;margin-top: 0.6125rem;clear: none;}
+.up_recom i{display: block;width: .8125rem;height: .8125rem;margin-top: 0.125rem;}
+.up_recom{display: block;float: left;width: 24%;}
+/**/
+.recomm_detail{text-align: center;font-size: 0.725rem;}
+.recomm_detail li{width: 48%;display: block;float: left;background: #fff;;margin: 0 1% .5rem;}
+.recomm_detail_img{display: inline-block;width: 100%;}
+.recomm_detail_title{text-align: left;font-weight: 500;line-height: 1.25rem;height: 1.25rem;overflow: hidden;margin: 0.5rem 0.5rem 0.3725rem;}
+.recomm_detail_bottom{margin: 0 .5rem .5rem;}
+.recomm_detail_price{color: #e33021;font-weight: 600;font-size: 0.8125rem;}
+.recomm_detail_similarity{position: relative;border: none;color: #777;padding: .0625rem .25rem;}
+.recomm_detail_similarity:after{content: ''; position: absolute;top: 0;left: 0;border: 1px solid #b2b2b2;-webkit-box-sizing: border-box;box-sizing: border-box;width: 200%;height: 200%;-webkit-transform: scale(0.5);transform: scale(0.5);-webkit-transform-origin: left top;transform-origin: left top;border-radius: 0.25rem;}
+li.recomm_detail_bg img{display: block;width: 100%;height: 100%;}

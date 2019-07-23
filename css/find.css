@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*header*/
+.header{background-color: #fff;position: relative;border: none;z-index: 3;}
+.header:after{content: ''; position: absolute;top: 0;left: 0;border-bottom: 1px solid #ddd;-webkit-box-sizing: border-box;box-sizing: border-box;width: 200%;height: 200%;-webkit-transform: scale(0.5);transform: scale(0.5);-webkit-transform-origin: left top;transform-origin: left top;z-index: -1;}
+.head_code,.head_title,.head_news{display: inline-block;}
+.header img{display: block;}
+.head_code img,.head_news img{width: 1.875rem;height: 1.875rem;margin-top: .5rem;}
+.head_title img{width: 4.8125rem;margin-top: .375rem;}
+/**/
+#content{position: relative;padding-top: 8rem;}
+.option_menu{position: absolute;top: 0;left: 0;width: 100%;}
+.icon_menu,.text_menu{position: relative;border: none;z-index: 3;background-color: #fff;overflow-y: hidden;overflow-x: auto;}
+.icon_menu:after,.text_menu:after{content: ''; position: absolute;top: 0;left: 0;border-bottom: 1px solid #ddd;-webkit-box-sizing: border-box;box-sizing: border-box;width: 200%;height: 200%;-webkit-transform: scale(0.5);transform: scale(0.5);-webkit-transform-origin: left top;transform-origin: left top;z-index: -1;}
+.icon_menu li,.text_menu li{float: left;}
+.icon_menu,.icon_menu ul{height: 4.2rem;font-size: .75rem;text-align: center;padding: .5rem 0;}
+.icon_menu a{color: #999;}
+.icon_menu ul{width: 30rem;}
+.icon_menu i{display: inline-block;height: 2.1875rem;width: 2.1875rem;background-size: 27.9375rem 2.1875rem;background-image: url(../img/jd/icon_8.png);background-repeat: no-repeat;}
+.icon_menu li{width: 5rem;height: 4.2rem;}
+.icon_menu li:nth-of-type(2) i{background-position: -5.25rem 0;}
+.icon_menu li:nth-of-type(3) i{background-position: -10.5rem 0;}
+.icon_menu li:nth-of-type(4) i{background-position: -15.375rem 0;}
+.icon_menu li:nth-of-type(5) i{background-position: -20.5625rem 0;}
+.icon_menu li:nth-of-type(6) i{background-position: top right;}
+
+.text_menu{height: 2.8rem;line-height: 2.8rem;}
+.text_menu ul{width: 27rem;}
+.text_menu li{width: 4.5rem;text-align: center;/*position: relative;top: -0.0625rem;*/}
+.text_menu li.active{border-bottom: .0625rem solid #fc0609;}
+.text_menu li.active a{color: #fc0609;}
+/**/
+.find_item{height: 6.2rem;background-color: #fff;overflow: hidden;margin-top: .5rem}
+.find_item img{height: 6.2rem;float: left;display: block;}
+.find_text{margin-left: 1rem;width: 54%;}
+.find_item h5{color: #fc0609;font-size: .75rem;margin-top: .5rem;}
+.find_item h4{line-height: 1.375rem;height: 2.75rem;}
+.find_text span{font-size: .75rem;color: #999;float: right;}

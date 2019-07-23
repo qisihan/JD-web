@@ -1,0 +1,22 @@
+{
+	"status":"1",
+	"message":"Request Success",
+	"result":[
+	   {
+		   "slideUrl":"goods.html",
+		   "slideImg":"img/banner/banner1.jpg",
+		   "slideTips":"Prompt Message"
+	   },
+	   {
+		   "slideUrl":"goods.html",
+		   "slideImg":"img/banner/banner2.jpg",
+		   "slideTips":"Prompt Message"
+	   },
+	   {
+		   "slideUrl":"goods.html",
+		   "slideImg":"img/banner/banner3.jpg",
+		   "slideTips":"Prompt Message"
+	   }
+	   
+	]
+}

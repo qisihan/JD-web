@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="apple-touch-icon-precomposed" href="">
+		<link rel="stylesheet" type="text/css" href="css/mint-ui.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/frame.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>首页</title>
+	</head>
+
+	<body>
+		<!-- 页面容器 -->
+		<div id="page">
+			<!-- 头部信息部分 -->
+			<!-- <div id="header" class="header">
+				<div class="container clear-fix" >
+					<div class="head_code fl"><a href=""><img src="img/jd/icon_9.png"></a></div>
+					<div class="head_search">
+						<form action="">
+							<input class="ellipsis" type="search" placeholder="型男护肤超级品类日 每满199减100" value="">
+							<input type="button" value="">
+						</form>
+					</div>
+					<div class="head_news fr"><a href=""><img src="img/jd/icon_6.png" alt=""></a></div>
+				</div>
+			</div> -->
+			<!-- 主体内容部分 -->
+			<div id="content" class="content">
+				<div id="header" class="header " data="fix-header">
+					<div class="container clear-fix" >
+						<div class="head_code fl"><a href=""><img src="img/jd/icon21.png"></a></div>
+						<div class="head_search">
+							<form action="">
+								<input class="ellipsis" type="search" placeholder="型男护肤超级品类日 每满199减100" value="">
+								<input type="button" value="">
+							</form>
+						</div>
+						<div class="head_news fr"><a href=""><img src="img/jd/icon24.png" alt=""></a></div>
+					</div>
+				</div>
+				<!--swiper-->
+				<div class="swiper">
+					<div class="swiper-container coursole-swiper">
+				        <div class="swiper-wrapper">
+				            <div class="swiper-slide" v-for="(item,key) in slideList"><a :href="item.slideUrl" :title="item.slideTips" target=""><img :src="item.slideImg" /></a></div>
+				            <!--<div class="swiper-slide"><a href="" title="" target=""><img src="img/banner/banner2.jpg" /></a></div>
+				            <div class="swiper-slide"><a href="" title="" target=""><img src="img/banner/banner3.jpg" /></a></div>-->
+				        </div>
+				        <!-- Add Pagination -->
+				        <div class="swiper-pagination coursole-pagination" style="bottom: 0;"></div>
+				    </div>
+				</div>
+				<div class="menu">
+					<ul class="clear-fix">
+						<li><a href="">
+							<i></i><br/>京东超市
+						</a></li>
+						<li><a href="">
+							<i></i><br/>全球购
+						</a></li>
+						<li><a href="">
+							<i></i><br/>服装城
+						</a></li>
+						<li><a href="">
+							<i></i><br/>发现好货
+						</a></li>
+						<li><a href="">
+							<i></i><br/>1元抢宝
+						</a></li>
+						<li><a href="">
+							<i></i><br/>充值中心
+						</a></li>
+						<li><a href="">
+							<i></i><br/>领京豆
+						</a></li>
+						<li><a href="">
+							<i></i><br/>领券
+						</a></li>
+						<li><a href="">
+							<i></i><br/>京东金融
+						</a></li>
+						<li><a href="">
+							<i></i><br/>全部
+						</a></li>
+					</ul>
+				</div>
+				<div class="stop-press-new">
+					<div class="container">
+						<div class="new-container" id="new-container">
+							<ul>
+								<li><a href="" class=" ellipsis">
+									<i style="color: #f44f56;margin-right: .125rem;">抢</i>手机空调，买一个赢一个，还有更多的惊喜adsad21
+								</a></li>
+								<!-- <li><a href="" class=" ellipsis">
+									<i style="color: #f44f56;margin-right: .125rem;">爆</i>手机空调，买一个赢一个，还有更多的惊喜
+								</a></li>
+								<li><a href="" class=" ellipsis">
+									<i style="color: #f44f56;margin-right: .125rem;">疯</i>手机空调，买一个赢一个，还有更多的惊喜
+								</a></li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="seckill">
+					<div class="seckill_title">
+						<div class="container clear-fix">
+							<i class="fl seckill_icon"></i>
+							<span class="fl">16点场&nbsp;<em>00</em>:<em>19</em>:<em>15</em></span>
+							<span class="seckill_choice fr">精选尖货轮播秒<i>›</i></span>
+						</div>
+					</div>
+					<div class="seckill_list">
+						<ul class="clear-fix">
+							<li v-for="(item,key) in seckillList"><a :href="item.seckillUrl">
+								<div class="seckill_img"><img :src="item.seckillImg" :alt="item.seckillTips"><i class="hot" v-text="item.seckillBadge"></i></div>
+								<span>{{item.seckillPrice | formatMoney}}</span><br/><del>{{item.seckillOldPrice | formatMoney}}</del>
+							</a></li>
+							<!--<li><a href="">
+								<div class="seckill_img"><img src="img/jd/goods/img51_07.jpg" alt=""><i class="overbalance">超值</i></div>
+								<span>￥239</span><br/><del>￥298</del>
+							</a></li>
+							<li><a href="">
+								<div class="seckill_img"><img src="img/jd/goods/img53_07.jpg" alt=""><i class="nominate">推荐</i></div>
+								<span>￥6599</span><br/><del>￥6999</del>
+							</a></li>
+							<li><a href="">
+								<div class="seckill_img"><img src="img/jd/goods/img54_03.jpg" alt=""><i class="second_big">秒大牌</i></div>
+								<span>￥79.9</span><br/><del>￥136.9</del>
+							</a></li>
+							<li><a href="">
+								<div class="seckill_img"><img src="img/jd/goods/img55_03.jpg" alt=""><i class="hot">热卖</i></div>
+								<span>￥22.1</span><br/><del>￥36.9</del>
+							</a></li>
+							<li><a href="">
+								<div class="seckill_img"><img src="img/jd/goods/img56_03.jpg" alt=""><i class="nominate">推荐</i></div>
+								<span>￥1</span><br/><del>￥19.9</del>
+							</a></li>-->
+						</ul>
+					</div>
+				</div>
+				<div class="adv"><a href=""><img style="display: block;" width="100%" src="img/jd/activity1_06.jpg" alt=""></a></div>
+				<div class="dis">
+					<ul class="clear-fix">
+						<li><a href="">
+							<img src="img/jd/goods/img61_03.jpg" alt="">
+							<div class="dis_text">
+								<h2>发现好货</h2>
+								<span>京东好货<i>全网罗</i></span>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img62_03.jpg" alt="">
+							<div class="dis_text">
+								<h2>店铺头条</h2>
+								<span>转角遇到<i>一家店</i></span>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img63_03.jpg" alt="">
+							<div class="dis_text">
+								<h2>排行榜</h2>
+								<em>热卖直降中</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img64_03.jpg" alt="">
+							<div class="dis_text">
+								<h2>闪购</h2>
+								<em>gxg低至2折</em>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+				<div class="divider"><img style="display: block;" width="100%" src="img/jd/divider1_06.jpg"></div>
+				<div class="ai_life">
+					<ul class="clear-fix">
+						<li><a href="">
+							<img src="img/jd/goods/img65_04.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>玩3C</h2>
+								<em>微星宙斯盾首发</em><br/>
+								<i>限量4699元</i>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img66_04.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>京东家电</h2>
+								<em>2件低至99元</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img67_05.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>京东超市</h2>
+								<em>京东水饮99-50</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img68_05.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>爱家</h2>
+								<em>大牌300减50</em><br/>
+								<i>火热大牌周</i>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+				<div class="line_life">
+					<ul class="clear-fix">
+						<li><a href="">
+							<img src="img/jd/goods/img71_02.jpg" alt="">
+							<div class="ai_life_text ellipsis">
+								<h2>爱宝安</h2>
+								<em>满299-100</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img72_03.jpg" alt="">
+							<div class="ai_life_text ellipsis">
+								<h2>爱美丽</h2>
+								<em>丝蓓洗护组</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img73_03.jpg" alt="">
+							<div class="ai_life_text ellipsis">
+								<h2>爱吃</h2>
+								<em>麦片199减100</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img74_03.jpg" alt="">
+							<div class="ai_life_text ellipsis">
+								<h2>爱逛</h2>
+								<em>森马200-50</em>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+				<!--swiper-adv-->
+				<div class="swiper" style="margin-top: .625rem;">
+					<div class="container">
+						<div class="swiper-container coursole-swiper">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide"><a href="" title="" target=""><img src="img/banner/banner11_06.jpg" /></a></div>
+					            <div class="swiper-slide"><a href="" title="" target=""><img src="img/banner/banner12_03.jpg" /></a></div>
+					        </div>
+					        <!-- Add Pagination -->
+					        <div class="swiper-pagination coursole-pagination" style="bottom: 1px;"></div>
+					    </div>
+					</div>
+				</div>
+				<div class="divider"><img style="display: block;" width="100%" src="img/jd/divider2_05.jpg"></div>
+				<div class="ai_life">
+					<ul class="clear-fix">
+						<li><a href="">
+							<img src="img/jd/goods/img81_03.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>全球购自营</h2>
+								<em>澳洲进口5元升</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img82_03.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>环球时尚</h2>
+								<em>大牌低至2折</em><br/>
+								<i>0元抽名品</i>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img83_03.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>健康运动</h2>
+								<em>鹿晗同款潮T</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img84_03.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>奢品大牌</h2>
+								<em>自营大牌天骏</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img85_03.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>珠宝首饰</h2>
+								<em>CRD低至4.5折</em><br/>
+								<i>火热大牌周</i>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img86_03.jpg" alt="">
+							<div class="ai_life_text">
+								<h2>精选达人</h2>
+								<em>夏日T恤百变秀</em><br/>
+								<i>凹糟轻巧搭</i>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+				<!--swiper-adv-->
+				<div class="swiper" style="margin-top: .625rem;">
+					<div class="container">
+						<div class="swiper-container coursole-swiper">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide"><a href="" title="" target=""><img src="img/banner/banner13_06.jpg" /></a></div>
+					            <div class="swiper-slide"><a href="" title="" target=""><img src="img/banner/banner14_03.jpg" /></a></div>
+					        </div>
+					        <!-- Add Pagination -->
+					        <div class="swiper-pagination coursole-pagination" style="bottom: 1px;"></div>
+					    </div>
+					</div>
+				</div>
+				<div class="divider"><img style="display: block;" width="100%" src="img/jd/divider3_08.jpg"></div>
+				<div class="feature">
+					<ul class="clear-fix">
+						<li><a href="">
+							<img src="img/jd/goods/img91_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>团购</h2>
+								<em>小牛5限时降</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img92_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>电影娱乐</h2>
+								<em>29元特价抢票</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img93_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>京东旅行</h2>
+								<em>赢里约游大奖</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img94_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>白条商城</h2>
+								<em>iPhone月供500</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img95_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>京东众筹</h2>
+								<em>智能扫地车</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img96_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>智能生活</h2>
+								<em>无链条山地车</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img97_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>爱车生活</h2>
+								<em>车载吸尘5折购</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img98_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>夺宝岛</h2>
+								<em>1元起拍</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img99_07.jpg" alt="">
+							<div class="feature_text ellipsis">
+								<h2>京东拍卖</h2>
+								<em>经典名牌典藏</em>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+				<!--swiper-adv-->
+				<div class="swiper" style="margin-top: .625rem;">
+					<div class="container">
+						<div class="swiper-container coursole-swiper">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide"><a href="" title="" target=""><img src="img/banner/banner15_03.jpg" /></a></div>
+					            <div class="swiper-slide"><a href="" title="" target=""><img src="img/banner/banner16_03.jpg" /></a></div>
+					        </div>
+					        <!-- Add Pagination -->
+					        <div class="swiper-pagination coursole-pagination" style="bottom: 1px;"></div>
+					    </div>
+					</div>
+				</div>
+				<div class="divider"><img style="display: block;" width="100%" src="img/jd/divider4_06.jpg"></div>
+				<div class="go_shopping">
+					<ul class="clear-fix">
+						<li class="go_shopping_bg"><a href="">
+							<!-- <img src="img/jd/img61_03.jpg" alt="">
+							<div class="go_shopping_text">
+								<h2>发现好货</h2>
+								<em>热卖直降中</em>
+							</div> -->
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img511_09.jpg" alt="">
+							<div class="go_shopping_text">
+								<h2>母婴馆</h2>
+								<em>好货9块9包邮</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img512_09.jpg" alt="">
+							<div class="go_shopping_text">
+								<h2>大家电馆</h2>
+								<em>变频空调2499</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img513_09.jpg" alt="">
+							<div class="go_shopping_text">
+								<h2>服装管</h2>
+								<em>爆款低至69元</em>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+				<div class="line_life horizontal_life">
+					<ul class="clear-fix">
+						<li><a href="">
+							<img src="img/jd/goods/img611_03.jpg" alt="">
+							<div class="line_life_text ellipsis">
+								<h2>美妆馆</h2>
+								<em>新手达人必备</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img612_03.jpg" alt="">
+							<div class="line_life_text ellipsis">
+								<h2>电脑办公</h2>
+								<em>宙斯盾首发</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img613_03.jpg" alt="">
+							<div class="line_life_text ellipsis">
+								<h2>鞋靴箱包</h2>
+								<em>低至3折</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img614_03.jpg" alt="">
+							<div class="line_life_text ellipsis">
+								<h2>小家电馆</h2>
+								<em>满100减30</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img615_03.jpg" alt="">
+							<div class="line_life_text ellipsis">
+								<h2>生鲜馆</h2>
+								<em>初尝童子蟹</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img616_03.jpg" alt="">
+							<div class="line_life_text ellipsis">
+								<h2>运动护外</h2>
+								<em>满399减60</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img617_03.jpg" alt="">
+							<div class="line_life_text ellipsis">
+								<h2>个护清洁</h2>
+								<em>六神199-100</em>
+							</div>
+						</a></li>
+						<li><a href="">
+							<img src="img/jd/goods/img618_03.jpg" alt="">
+							<div class="line_life_text ellipsis">
+								<h2>珠宝馆</h2>
+								<em>每日9.9秒杀</em>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+				<div class="adv"><a href=""><img style="display: block;" width="100%" src="img/jd/activity2_06.jpg" alt=""></a></div>
+				<div class="divider"><img style="display: block;" width="100%" src="img/jd/divider5_07.jpg"></div>
+				<div class="exclusive">
+					<div class="exclusive_title"><span>发<br/>现<br/>好<br/>店<br/></span><i>›</i></div>
+					<div class="exclusive_content">
+						<ul class="clear-fix">
+							<li><a href="">
+								<div class="exclusive_classify">
+									精选<span><i>20</i>家<br/>好店</span>
+								</div>
+								<div class="exclusive_shop">
+									<img width="80" src="img/jd/goods/logo1_06.jpg" alt="">
+									<h5>华硕笔记本京东官方旗舰店</h5>
+									<div class="img_list">
+										<img src="img/jd/goods/exclusive1_10.jpg" alt="">
+										<img src="img/jd/goods/exclusive2_10.jpg" alt="">
+										<img src="img/jd/goods/exclusive3_10.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+							<li><a href="">
+								<div class="exclusive_classify">
+									电脑整机<span><i>20</i>家<br/>好店</span>
+								</div>
+								<div class="exclusive_shop">
+									<img width="80" src="img/jd/goods/logo2_03.jpg" alt="">
+									<h5>机械革命官方旗舰店</h5>
+									<div class="img_list">
+										<img src="img/jd/goods/exclusive4_07.jpg" alt="">
+										<img src="img/jd/goods/exclusive4_07.jpg" alt="">
+										<img src="img/jd/goods/exclusive5_07.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+							<li><a href="">
+								<div class="exclusive_classify">
+									男装<span><i>20</i>家<br/>好店</span>
+								</div>
+								<div class="exclusive_shop">
+									<img width="80" src="img/jd/goods/logo3_03.jpg" alt="">
+									<h5>INTERIGHT旗舰店</h5>
+									<div class="img_list">
+										<img src="img/jd/goods/exclusive6_07.jpg" alt="">
+										<img src="img/jd/goods/exclusive7_07.jpg" alt="">
+										<img src="img/jd/goods/exclusive8_07.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="groom">
+					<div class="groom-title">/为你推荐/</div>
+						<ul class="clear-fix">
+							<li><a href="">
+									<img src="img/jd/goods/groom1_03.jpg" alt="">
+									<p class="ellipsis">澳洲进口牛奶Vitalife低脂牛奶</p>
+									<div class="clear-fix">
+										<span class="fl">￥39.90</span><i class="fr">看相似</i>
+									</div>
+								</a></li>
+							<li><a href="">
+									<img src="img/jd/goods/groom2_03.jpg" alt="">
+									<p class="ellipsis">机械革命(MECHREVO)MR 深海泰坦</p>
+									<div class="clear-fix">
+										<span class="fl">￥39.90</span><i class="fr">看相似</i>
+									</div>
+								</a></li>
+							<li><a href="">
+									<img src="img/jd/goods/groom3_03.jpg" alt="">
+									<p class="ellipsis">机械革命(MECHREVO)MR 深海泰坦</p>
+									<div class="clear-fix">
+										<span class="fl">￥39.90</span><i class="fr">看相似</i>
+									</div>
+								</a></li>
+							<li><a href="">
+									<img src="img/jd/goods/groom4_03.jpg" alt="">
+									<p class="ellipsis">机械革命(MECHREVO)MR 深海泰坦</p>
+									<div class="clear-fix">
+										<span class="fl">￥39.90</span><i class="fr">看相似</i>
+									</div>
+								</a></li>
+							<li><a href="">
+									<img src="img/jd/goods/groom5_03.jpg" alt="">
+									<p class="ellipsis">机械革命(MECHREVO)MR 深海泰坦</p>
+									<div class="clear-fix">
+										<span class="fl">￥39.90</span><i class="fr">看相似</i>
+									</div>
+								</a></li>
+							<li><a href="">
+									<img src="img/jd/goods/groom6_03.jpg" alt="">
+									<p class="ellipsis">机械革命(MECHREVO)MR 深海泰坦</p>
+									<div class="clear-fix">
+										<span class="fl">￥39.90</span><i class="fr">看相似</i>
+									</div>
+								</a></li>
+							<li><a href="">
+									<img src="img/jd/goods/groom7_03.jpg" alt="">
+									<p class="ellipsis">机械革命(MECHREVO)MR 深海泰坦</p>
+									<div class="clear-fix">
+										<span class="fl">￥39.90</span><i class="fr">看相似</i>
+									</div>
+								</a></li>
+						</ul>
+				</div>
+			</div>
+			<!-- 底部导航 -->
+			<div id="footer">
+				<div class="container" style="padding: 0;">
+					<ul class="footer-menu clear-fix">
+						<li class="active"><i></i>首页</li>
+						<li><i></i>分类</li>
+						<li><i><em class="find"></em></i>发现</li>
+						<li><i><em class="cart">8</em></i>购物车</li>
+						<li><i></i>我的</li>
+					</ul>
+					<!-- <div class="buy_menu fl">
+						<ul class="clear-fix">
+							<li><i></i>联系卖家</li>
+							<li><i></i>店铺</li>
+							<li><i></i>关注</li>
+							<li><i><em class="cart">9</em></i>购物车</li>
+						</ul>
+					</div>
+					<div class="buy_btn fr">加入购物车</div> -->
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script type="text/javascript" src="js/vue-resource.min.js"></script>
+		<script type="text/javascript" src="js/mint-ui.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+			   	//搜索背景透明度变化
+			   	var h=$('#header').height();
+			   	$('.content').on('scroll',function(){
+			   		var t=parseFloat($('.content').scrollTop());
+			   		var v=parseFloat(t/150).toFixed(2);
+			   		if(v > .95){
+			   			v = .95;
+			   			$('.head_code').find('img').prop('src','img/jd/icon_9.png');
+			   			$('.head_news').find('img').prop('src','img/jd/icon_6.png');
+			   		}else{
+			   			$('.head_code').find('img').prop('src','img/jd/icon21.png');
+			   			$('.head_news').find('img').prop('src','img/jd/icon24.png');
+			   		}
+			   		$('#header').animate({'background-color':'rgba(255,255,255,'+v+')'},100);
+			   	})
+			})
+			
+		</script>
+	</body>
+
+</html>

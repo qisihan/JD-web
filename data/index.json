@@ -1,0 +1,126 @@
+{
+	"status":"1",
+	"message":"Request Success",
+	"result":{
+		"slide":[
+			{
+			   "slideUrl":"goods.html",
+			   "slideImg":"img/banner/banner1.jpg",
+			   "slideTips":"Prompt Message"
+			},
+			{
+			   "slideUrl":"goods.html",
+			   "slideImg":"img/banner/banner2.jpg",
+			   "slideTips":"Prompt Message"
+			},
+			{
+			   "slideUrl":"goods.html",
+			   "slideImg":"img/banner/banner3.jpg",
+			   "slideTips":"Prompt Message"
+			}
+		],
+		"entryIcon":[
+		    {
+		    	"icon":"",
+		    	"iconTitle":"",
+		    	"iconUrl":""
+		    },
+		    {
+		    	"icon":"",
+		    	"iconTitle":"",
+		    	"iconUrl":""
+		    }
+		],
+		"seckill":[
+			{
+			   "seckillUrl":"goods.html",
+			   "seckillImg":"img/jd/goods/img52_07.jpg",
+			   "seckillTips":"Prompt Message",
+			   "seckillPrice":"29.9",
+			   "seckillBadge":"热卖",
+			   "seckillOldPrice":"39.9"
+			},
+			{
+			   "seckillUrl":"goods.html",
+			   "seckillImg":"img/jd/goods/img53_07.jpg",
+			   "seckillTips":"Prompt Message",
+			   "seckillPrice":"129.9",
+			   "seckillBadge":"推荐",
+			   "seckillOldPrice":"329.9"
+			},
+			{
+			   "seckillUrl":"goods.html",
+			   "seckillImg":"img/jd/goods/img54_03.jpg",
+			   "seckillTips":"Prompt Message",
+			   "seckillPrice":"32.8",
+			   "seckillBadge":"秒大牌",
+			   "seckillOldPrice":"45"
+			},
+			{
+			   "seckillUrl":"goods.html",
+			   "seckillImg":"img/jd/goods/img55_03.jpg",
+			   "seckillTips":"Prompt Message",
+			   "seckillPrice":"42.8",
+			   "seckillBadge":"热卖",
+			   "seckillOldPrice":"67"
+			},
+			{
+			   "seckillUrl":"goods.html",
+			   "seckillImg":"img/jd/goods/img56_03.jpg",
+			   "seckillTips":"Prompt Message",
+			   "seckillPrice":"1",
+			   "seckillBadge":"推荐",
+			   "seckillOldPrice":"699"
+			}
+		],
+		"loveLife":[
+		    {
+		    	"lifeImg":"",
+		    	"lifeUrl":"",
+		    	"lifeTitle":"",
+		    	"lifeSubtitle":"",
+		    	"lifeAttach":""
+		    	
+		    },
+		    {
+		    	"lifeImg":"",
+		    	"lifeUrl":"",
+		    	"lifeTitle":"",
+		    	"lifeSubtitle":"",
+		    	"lifeAttach":""
+		    	
+		    }
+		],
+		"enjoyQuality":[
+			{
+				"qualityImg":"",
+				"qualityUrl":"",
+				"qualityTitle":"",
+				"qualitySubtitle":"",
+				"qualityAttach":""
+				
+			}
+		],
+		"buyFeature":[
+			{
+				"featureImg":"",
+				"featureUrl":"",
+				"featureTitle":"",
+				"featureSubtitle":"",
+				"featureAttach":""
+				
+			}
+		],
+		"goShopping":[
+			{
+				"featureImg":"",
+				"featureUrl":"",
+				"featureTitle":"",
+				"featureSubtitle":"",
+				"featureAttach":""
+				
+			}
+		]
+		
+	}
+}
